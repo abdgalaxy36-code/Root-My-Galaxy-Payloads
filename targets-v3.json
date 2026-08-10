@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "targets": [
+    {
+      "model": "a37x",
+      "build": "A376BXXS4AZG4",
+      "kernel": "6.1.138-android14-11",
+      "fingerprint": "samsung/a37xnaxx/a37x:16/BP4A.251205.006/A376BXXS4AZG4_OJM4AZG4:user/release-keys",
+      "payload": "cve-2026-43499-app-a37-custom.so",
+      "hash": "da1da1856feb4bdfa65da9cf699161668cffb5eecec011a043ffbc548dfbfe34"
+    }
+  ]
+}
