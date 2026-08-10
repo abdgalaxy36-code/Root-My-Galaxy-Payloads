@@ -1,0 +1,122 @@
+src/util.c:420:34: error: use of undeclared identifier 'SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR_IMAGE'
+  420 |              (unsigned long long)SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR,
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:423:34: error: use of undeclared identifier 'SLIDE_SYSCTL_BOOTID_IMAGE'
+  423 |              (unsigned long long)SLIDE_SYSCTL_BOOTID);
+      |                                  ^~~~~~~~~~~~~~~~~~~
+src/util.c:897:16: error: use of undeclared identifier 'SLIDE_NFULNL_LOGGER_OBJECT_IMAGE'
+  897 |     write_pc = SLIDE_NFULNL_LOGGER_OBJECT + slide_p0_offset;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/common.h:181:23: note: expanded from macro 'SLIDE_NFULNL_LOGGER_OBJECT'
+  181 |   P0_DATA_ALIAS_CONST(SLIDE_NFULNL_LOGGER_OBJECT_IMAGE)
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:899:18: error: use of undeclared identifier 'SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR_IMAGE'
+  899 |     write_left = SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR + slide_p0_offset;
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/common.h:183:23: note: expanded from macro 'SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR'
+  183 |   P0_DATA_ALIAS_CONST(SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR_IMAGE)
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:930:30: error: use of undeclared identifier 'FAKE_TASK_PRIO_OFF'
+  930 |     put32(p, FAKE_TASK_OFF + FAKE_TASK_PRIO_OFF, FAKE_TASK_PRIO);
+      |                              ^~~~~~~~~~~~~~~~~~
+src/util.c:931:30: error: use of undeclared identifier 'FAKE_TASK_NORMAL_PRIO_OFF'
+  931 |     put32(p, FAKE_TASK_OFF + FAKE_TASK_NORMAL_PRIO_OFF, FAKE_TASK_PRIO);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:932:30: error: use of undeclared identifier 'FAKE_TASK_PI_LOCK_OFF'
+  932 |     put32(p, FAKE_TASK_OFF + FAKE_TASK_PI_LOCK_OFF, 0);
+      |                              ^~~~~~~~~~~~~~~~~~~~~
+src/util.c:934:32: error: use of undeclared identifier 'FAKE_TASK_PI_WAITERS_OFF'
+  934 |       put64(p, FAKE_TASK_OFF + FAKE_TASK_PI_WAITERS_OFF, 0);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:935:32: error: use of undeclared identifier 'FAKE_TASK_PI_WAITERS_OFF'
+  935 |       put64(p, FAKE_TASK_OFF + FAKE_TASK_PI_WAITERS_OFF + 0x08, 0);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:937:32: error: use of undeclared identifier 'FAKE_TASK_PI_WAITERS_OFF'
+  937 |       put64(p, FAKE_TASK_OFF + FAKE_TASK_PI_WAITERS_OFF,
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:939:32: error: use of undeclared identifier 'FAKE_TASK_PI_WAITERS_OFF'
+  939 |       put64(p, FAKE_TASK_OFF + FAKE_TASK_PI_WAITERS_OFF + 0x08,
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:942:30: error: use of undeclared identifier 'FAKE_TASK_TASK_GROUP_OFF'
+  942 |     put64(p, FAKE_TASK_OFF + FAKE_TASK_TASK_GROUP_OFF, task_group);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:943:30: error: use of undeclared identifier 'FAKE_TASK_PI_TOP_TASK_OFF'
+  943 |     put64(p, FAKE_TASK_OFF + FAKE_TASK_PI_TOP_TASK_OFF, pi_top_task);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:944:30: error: use of undeclared identifier 'FAKE_TASK_PI_BLOCKED_ON_OFF'
+  944 |     put64(p, FAKE_TASK_OFF + FAKE_TASK_PI_BLOCKED_ON_OFF, 0);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/util.c:946:14: error: use of undeclared identifier 'RIGHT_OFF'
+  946 |     put64(p, RIGHT_OFF + 0x00, fake_parent);
+      |              ^~~~~~~~~
+src/util.c:947:14: error: use of undeclared identifier 'RIGHT_OFF'
+  947 |     put64(p, RIGHT_OFF + 0x08, 0);
+      |              ^~~~~~~~~
+src/util.c:948:14: error: use of undeclared identifier 'RIGHT_OFF'
+  948 |     put64(p, RIGHT_OFF + 0x10, 0);
+      |              ^~~~~~~~~
+src/util.c:1474:15: error: use of undeclared identifier 'CFG_BIN_BUFFER_OFF'
+ 1474 |   put64(blob, CFG_BIN_BUFFER_OFF - ASHMEM_NAME_PREFIX_LEN, target);
+      |               ^~~~~~~~~~~~~~~~~~
+src/util.c:1475:15: error: use of undeclared identifier 'CFG_BIN_BUFFER_SIZE_OFF'
+ 1475 |   put32(blob, CFG_BIN_BUFFER_SIZE_OFF - ASHMEM_NAME_PREFIX_LEN, len);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+src/slide_app.c:278:9: error: use of undeclared identifier 'SLIDE_NFULNL_LOGGER_OBJECT_IMAGE'
+  278 |     {0, SLIDE_NFULNL_LOGGER_OBJECT + slide_p0_offset, "tree_pc"},
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/common.h:181:23: note: expanded from macro 'SLIDE_NFULNL_LOGGER_OBJECT'
+  181 |   P0_DATA_ALIAS_CONST(SLIDE_NFULNL_LOGGER_OBJECT_IMAGE)
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/slide_app.c:280:9: error: use of undeclared identifier 'SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR_OFF'
+  280 |     {2, SLIDE_WAITER_TREE_LEFT + slide_p0_offset, "tree_left"},
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+src/targets/a37-A376BXXS4AZG4/offsets.h:153:43: note: expanded from macro 'SLIDE_WAITER_TREE_LEFT'
+  153 | #define SLIDE_WAITER_TREE_LEFT            SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR_OFF
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/slide_app.c:282:9: error: use of undeclared identifier 'SLIDE_NFULNL_LOGGER_OBJECT_IMAGE'
+  282 |     {5, SLIDE_NFULNL_LOGGER_OBJECT + slide_p0_offset, "pi0"},
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/common.h:181:23: note: expanded from macro 'SLIDE_NFULNL_LOGGER_OBJECT'
+  181 |   P0_DATA_ALIAS_CONST(SLIDE_NFULNL_LOGGER_OBJECT_IMAGE)
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/slide_app.c:284:9: error: use of undeclared identifier 'SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR_IMAGE'
+  284 |     {7, SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR + slide_p0_offset, "pi2"},
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/common.h:183:23: note: expanded from macro 'SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR'
+  183 |   P0_DATA_ALIAS_CONST(SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR_IMAGE)
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/slide_app.c:302:32: error: invalid application of 'sizeof' to an incomplete type 'struct slide_waiter_word[]'
+  302 |   for (size_t i = 0; i < sizeof(words) / sizeof(words[0]); i++) {
+      |                                ^~~~~~~
+src/slide_app.c:1563:34: error: use of undeclared identifier 'SLIDE_NFULNL_LOGGER_OBJECT_IMAGE'
+ 1563 |             (unsigned long long)(SLIDE_NFULNL_LOGGER_OBJECT + slide_p0_offset),
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/slide_app.c:1565:17: error: use of undeclared identifier 'SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR_IMAGE'
+ 1565 |                 SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR + slide_p0_offset));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7 errors generated.
+src/fops.c:199:7: error: use of undeclared identifier 'SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR_IMAGE'
+  199 |       SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR + slide_p0_offset;
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/common.h:183:23: note: expanded from macro 'SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR'
+  183 |   P0_DATA_ALIAS_CONST(SLIDE_RANDOM_TABLE_BOOT_ID_DATA_PTR_IMAGE)
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/fops.c:200:40: error: use of undeclared identifier 'SLIDE_SYSCTL_BOOTID_IMAGE'
+  200 |   slide_bootid_want = slide_canon_addr(SLIDE_SYSCTL_BOOTID);
+      |                                        ^~~~~~~~~~~~~~~~~~~
+src/common.h:193:49: note: expanded from macro 'SLIDE_SYSCTL_BOOTID'
+  193 | #define SLIDE_SYSCTL_BOOTID P0_DATA_ALIAS_CONST(SLIDE_SYSCTL_BOOTID_IMAGE)
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+src/pipe.c:549:47: error: use of undeclared identifier 'DIRECT_MAP_END'
+  549 |     if (pb.page >= VMEMMAP_START && pb.page < VMEMMAP_END) {
+      |                                               ^~~~~~~~~~~
+src/common.h:118:38: note: expanded from macro 'VMEMMAP_END'
+  118 | #define VMEMMAP_END (VMEMMAP_START + DIRECT_MAP_PAGES * STRUCT_PAGE_SIZE)
+      |                                      ^~~~~~~~~~~~~~~~
+src/common.h:117:28: note: expanded from macro 'DIRECT_MAP_PAGES'
+  117 | #define DIRECT_MAP_PAGES ((DIRECT_MAP_END - DIRECT_MAP_BASE) >> PAGE_SHIFT)
+      |                            ^~~~~~~~~~~~~~
+1 error generated.
