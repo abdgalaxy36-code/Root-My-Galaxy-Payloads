@@ -11,7 +11,23 @@
     },
     {
       "model": "a37x",
-      "build": "A376BXXU1AZB7",
+      "build": "A376BXXU1AZB7-V1",
+      "kernel": "6.1.138-android14-11",
+      "fingerprint": "samsung/a37xnaxx/a37x:16/BP4A.251205.006/A376BXXU1AZB7_OJM4AZG4:user/release-keys",
+      "payload": "cve-2026-43499-app-v1.so",
+      "hash": "63c4c04a9b295f63b2be7b4a516218b68c4c21905d17d0b2475e250ea87ab3d1"
+    },
+    {
+      "model": "a37x",
+      "build": "A376BXXU1AZB7-V2",
+      "kernel": "6.1.138-android14-11",
+      "fingerprint": "samsung/a37xnaxx/a37x:16/BP4A.251205.006/A376BXXU1AZB7_OJM4AZG4:user/release-keys",
+      "payload": "cve-2026-43499-app-v2.so",
+      "hash": "ef6962ab00dd4c41ae0e5493e99c6f675ebff75ec1b05720ead28deb9cc26e33"
+    },
+    {
+      "model": "a37x",
+      "build": "A376BXXU1AZB7-V3",
       "kernel": "6.1.138-android14-11",
       "fingerprint": "samsung/a37xnaxx/a37x:16/BP4A.251205.006/A376BXXU1AZB7_OJM4AZG4:user/release-keys",
       "payload": "cve-2026-43499-app-v3.so",
