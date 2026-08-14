@@ -170,7 +170,7 @@
 // ============================================================
 // MISSING DEFINITIONS (from A56 template)
 // ============================================================
-#define SLIDE_BANK_SLOTS 4
+#define SLIDE_BANK_SLOTS 1
 #define SLIDE_BANK_TASK_OFF 0x1000
 #define SLIDE_BANK_TASK_STRIDE 0x1c0
 #define SLIDE_BANK_LOCK_OFF 0x5200
