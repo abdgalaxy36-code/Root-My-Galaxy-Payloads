@@ -19,6 +19,26 @@ jobs:
         echo "ANDROID_NDK_HOME=$PWD/android-ndk-r29" >> $GITHUB_ENV
         echo "$PWD/android-ndk-r29/toolchains/llvm/prebuilt/linux-x86_64/bin" >> $GITHUB_PATH
     
+    - name: Validate target configuration
+      run: |
+        test -f src/targets/a37-A376BXXU1AZB7/target.h
+        grep -q 'A376BXXU1AZB7_OJM4AZB7:user/release-keys' src/targets/a37-A376BXXU1AZB7/target.h
+        python3 - <<'PY2'
+import json,re
+from pathlib import Path
+target=Path("src/targets/a37-A376BXXU1AZB7/target.h").read_text()
+m=re.search(r'#define BUILD_FINGERPRINT \\\s*"([^"]+)"',target)
+assert m, "BUILD_FINGERPRINT missing from target.h"
+expected=m.group(1)
+data=json.loads(Path("targets-v3.json").read_text())
+matches=[x for x in data["targets"] if x.get("model")=="a37x" and x.get("build")=="A376BXXU1AZB7-V3"]
+assert len(matches)==1, "Expected exactly one A376BXXU1AZB7-V3 target"
+actual=matches[0].get("fingerprint")
+assert actual==expected, f"Fingerprint mismatch: target.h={expected!r} JSON={actual!r}"
+print("Fingerprint validation passed:", expected)
+PY2
+        grep -q 'cve-2026-43499-app.release.so' .github/workflows/build.yml
+
     - name: Build Exploit
       run: |
         mkdir -p build/a37-A376BXXU1AZB7
