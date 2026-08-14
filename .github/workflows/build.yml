@@ -19,6 +19,14 @@ jobs:
         echo "ANDROID_NDK_HOME=$PWD/android-ndk-r29" >> $GITHUB_ENV
         echo "$PWD/android-ndk-r29/toolchains/llvm/prebuilt/linux-x86_64/bin" >> $GITHUB_PATH
     
+    - name: Validate target configuration
+      run: |
+        test -f src/targets/a37-A376BXXU1AZB7/target.h
+        grep -q 'A376BXXU1AZB7_OJM4AZB7:user/release-keys' src/targets/a37-A376BXXU1AZB7/target.h
+        grep -q 'A376BXXU1AZB7_OJM4AZG4:user/release-keys' targets-v3.json
+        grep -q 'A376BXXU1AZB7' targets-v3.json
+        grep -q 'cve-2026-43499-app.release.so' .github/workflows/build.yml
+
     - name: Build Exploit
       run: |
         mkdir -p build/a37-A376BXXU1AZB7
