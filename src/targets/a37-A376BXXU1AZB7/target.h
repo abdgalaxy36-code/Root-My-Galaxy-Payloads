@@ -4,7 +4,7 @@
 #define BUILD_VARIANT_LABEL "a37-A376BXXU1AZB7-root-umh"
 
 #define BUILD_FINGERPRINT \
-  "samsung/a37xnaxx/a37x:16/BP4A.251205.006/A376BXXU1AZB7_OJM4AZG4:user/release-keys"
+  "samsung/a37xnaxx/a37x:16/BP4A.251205.006/A376BXXU1AZB7_OJM4AZB7:user/release-keys"
 
 #define KIMAGE_TEXT_BASE 0xffffffc008000000ULL
 #define P0_PAGE_OFFSET 0xffffff8000000000ULL
